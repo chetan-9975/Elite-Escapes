@@ -1,4 +1,5 @@
 {
+  "engines":{"node":"v20.8.1"},
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.16.0",
     "cloudinary": "^1.21.0",
