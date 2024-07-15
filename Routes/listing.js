@@ -19,6 +19,9 @@ router.route("/filter/:categoryId").get(isLoggedIn,wrapAsync(listingController.f
 // New Route
 router.get("/new", isLoggedIn,listingController.renderNewForm);
 
+//search route 
+router.get("/search", wrapAsync(listingController.search));
+
 
 
 

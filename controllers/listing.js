@@ -139,3 +139,10 @@ module.exports.UpdateListing=async (req, res) => {
     req.flash("success","Listing Updated!");
     res.redirect("/listings");
 };
+
+module.exports.search = async (req, res) => {
+  let { title } = req.query;
+
+  const alllistings = await listing.find({ title });
+  res.render("./listings/index.ejs", { alllistings });
+};
