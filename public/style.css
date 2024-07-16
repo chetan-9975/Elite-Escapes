@@ -9,6 +9,62 @@ body {
     flex: 1;
 }
 
+footer {
+    background-color: #ebebeb;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.f-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.f-info-socials {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.f-info-brand {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.f-info-contact div {
+    margin-bottom: 0.3rem;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+    margin: 0 0.5rem;
+}
+
+.f-info-links {
+    margin-top: 0.5rem;
+}
+
+/* Ensure footer sticks to the bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
 .navbar {
     height: 5rem;
     background-color: aliceblue;
@@ -31,31 +87,6 @@ body {
     color: #fff !important;
 }
 
-.f-info-links a {
-    text-decoration: none;
-    color: #222222;
-}
-
-.f-info {
-    text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.f-info-socials, .f-info-links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.f-info-socials {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-}
 
 /* Cards */
 
@@ -141,3 +172,4 @@ body {
         color: #fe424d;
         font-size: 1.5rem;
     }
+}
