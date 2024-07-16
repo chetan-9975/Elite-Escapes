@@ -6,7 +6,7 @@
     padding: 0 1rem;
   }
   .search-btn:hover {
-    background-color: #ac47fa;
+    background-color:  #494D5F;
     color: #fff;
   }
   .search-btn i {
@@ -17,16 +17,43 @@
     border-radius: 25px;
     padding: 0.5rem 3rem;
   }
+  .navbar-collapse {
+    background-color: aliceblue;
+  }
+  .elite-escapes {
+    display: none;
+  }
+  @media (max-width: 767.98px) {
+    .elite-escapes {
+      display: inline-block;
+      font-weight: bold;
+      margin-left: 0.5rem;
+      color: #494D5F;
+      font-size: 1.5rem;
+    }
+  }
+  .nav-link {
+    padding: 0.5rem 1rem; /* Adjust padding for better button effect */
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Optional: To give rounded corners to the buttons */
+  }
+  .nav-link:hover {
+    background-color: #494D5F;
+    color: #fff !important;
+  }
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fa-solid fa-compass"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar0NavAltMarkup">
+    <a class="navbar-brand d-flex align-items-center" href="/listings">
+      <i class="fa-solid fa-compass"></i>
+      <span class="elite-escapes">ELITE-ESCAPES</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link " href="/listings">Explore</a>
+        <a class="nav-link" href="/listings">Explore</a>
       </div>
       <div class="navbar-nav ms-auto">
         <form class="d-flex" action="/listings/search" method="GET">
@@ -34,18 +61,14 @@
           <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </form>
       </div>
-
       <div class="navbar-nav ms-auto">
-
         <a class="nav-link" href="/listings/new">Add your Escape</a>
-        <%if (!currUser){%>
-          <a class="nav-link " href="/signup">Sign Up</a>
+        <% if (!currUser) { %>
+          <a class="nav-link" href="/signup">Sign Up</a>
           <a class="nav-link" href="/login">Log In</a>
-          <%}%>
-            <%if (currUser){%>
-              <a class="nav-link" href="/logout">Log Out</a>
-              <%}%>
-
+        <% } else { %>
+          <a class="nav-link" href="/logout">Log Out</a>
+        <% } %>
       </div>
     </div>
   </div>
